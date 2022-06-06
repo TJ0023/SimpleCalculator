@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calculator</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            font-family: Gotham Rounded, sans-serif;
+            font-weight: normal;
+          }
+          
+          body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, rgb(0, 145, 145), rgb(28, 70, 255));
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
+          
+            .container1 {
+              display: grid;
+              justify-content: center;
+              align-content: center;
+              min-height: 100vh;
+              grid-template-columns: repeat(4, 75px);
+              grid-template-rows: minmax(96px, auto) repeat(5, 80px);
+              }
+          
+              .container1 > button {
+                cursor: pointer;
+                font-size: 2rem;
+                border: 1px, solid #FFFFFF;
+                outline: none;
+                background-color: rbga(255, 255, 255, 0.75);
+                border: 0px;
+              }
+          
+                .btn:hover {
+                  background-color: #a9a9a9;
+                }
+          
+                .span-two  {
+                  grid-column: span 2;
+                  color: white;
+                  background-color: rgba(1, 18, 177, 0.8);
+                }
+          
+                .span-two:hover {
+                    background-color: rgba(51, 173, 255, 0.8);
+                  }
+
+                .output{
+                  grid-column: 1 / -1;
+                  background-color: rgba(0, 0, 0, 0.75);
+                  border-radius: 0.25em 0.25em 0 0;
+                  display: flex;
+                  align-items: flex-end;
+                  justify-content: space-around;
+                  flex-direction: column;
+                  padding: 10px;
+                  word-wrap: break-word;
+                  word-break: break-all;
+                }
+          
+                .output .previous-operand{
+                  color: rgba(255,255, 255, 0.75);
+                  font-size: 1.5rem;
+                }
+          
+                .output .current-operand{
+                  color: white;
+                  font-size: 2.5rem;
+                }
+
+                .equal {
+                    border-bottom-right-radius: 0.1em;
+                    border: 0px;
+                }
+
+                .end {
+                    border-bottom-left-radius: 0.1em;
+                    border: 0px;
+                }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="output">
+        <div data-previous-operand class="previous-operand"></div>
+        <div data-current-operand class="current-operand"></div>
+        </div>
+        <button class="span-two" data-all-clear>AC</button>
+        <button class="btn" data-delete>DEL</button>
+        <button class="btn" data-operation>÷</button>
+        <button class="btn" data-number>1</button>
+        <button class="btn" data-number>2</button>
+        <button class="btn" data-number>3</button>
+        <button class="btn" data-operation>*</button>
+        <button class="btn" data-number>4</button>
+        <button class="btn" data-number>5</button>
+        <button class="btn" data-number>6</button>
+        <button class="btn" data-operation>+</button>
+        <button class="btn" data-number>7</button>
+        <button class="btn" data-number>8</button>
+        <button class="btn" data-number>9</button>
+        <button class="btn" data-operation>-</button>
+        <button class="btn end" data-number>.</button>
+        <button class="btn" data-number>0</button>
+        <button class="span-two equal" data-equals>=</button>
+    
+        </div>
+        <script src="index.js"></script>
+</body>
+</html>
