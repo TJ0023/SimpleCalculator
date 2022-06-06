@@ -81,6 +81,30 @@
                   color: white;
                   font-size: 4.5rem;
                 }
+
+                .equal {
+                  grid-column: span 1;
+                }
+
+                .zero {
+                  grid-column: span 2;
+                  background-color: #333333;
+                  color: white;
+                  border-radius: 1.5em;
+                }
+
+                .zero:hover {
+                  background-color:  #707070;
+                }
+
+                .operation {
+                  background-color:  #f1a33b;
+                }
+
+                .operation:hover {
+                  background-color:  white;
+                  color: #f1a33b;
+                }
     </style>
 </head>
 <body>
@@ -90,22 +114,22 @@
         <div data-current-operand class="current-operand">0</div>
         </div>
         <button class="span-two" data-all-clear>AC</button>
-        <button class="btn" data-delete>DEL</button>
-        <button class="btn" data-operation>÷</button>
+        <button class="btn operation" data-delete>DEL</button>
+        <button class="btn operation" data-operation>÷</button>
         <button class="btn" data-number>1</button>
         <button class="btn" data-number>2</button>
         <button class="btn" data-number>3</button>
-        <button class="btn" data-operation>*</button>
+        <button class="btn operation" data-operation>*</button>
         <button class="btn" data-number>4</button>
         <button class="btn" data-number>5</button>
         <button class="btn" data-number>6</button>
-        <button class="btn" data-operation>+</button>
+        <button class="btn operation" data-operation>+</button>
         <button class="btn" data-number>7</button>
         <button class="btn" data-number>8</button>
         <button class="btn" data-number>9</button>
-        <button class="btn" data-operation>-</button>
+        <button class="btn operation" data-operation>-</button>
+        <button class="zero" data-number>0</button>
         <button class="btn end" data-number>.</button>
-        <button class="btn" data-number>0</button>
         <button class="span-two equal" data-equals>=</button>
     
         </div>
