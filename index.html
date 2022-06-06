@@ -8,14 +8,14 @@
     <style>
         *, *::before, *::after {
             box-sizing: border-box;
-            font-family: Gotham Rounded, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             font-weight: normal;
           }
           
           body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, rgb(0, 145, 145), rgb(28, 70, 255));
+            background: black;
             background-repeat: no-repeat;
             background-size: cover;
             }
@@ -26,30 +26,37 @@
               align-content: center;
               min-height: 100vh;
               grid-template-columns: repeat(4, 125px);
-              grid-template-rows: minmax(96px, auto) repeat(5, 80px);
+              grid-template-rows: minmax(200px, auto) repeat(5, 120px);
+              grid-gap: 1em;
               }
           
               .container1 > button {
                 cursor: pointer;
-                font-size: 2rem;
+                font-size: 2.5em;
                 border: 1px, solid #FFFFFF;
                 outline: none;
                 background-color: rbga(255, 255, 255, 0.75);
                 border: 0px;
               }
-          
+                .btn {
+                  border-radius: 50%;
+                  background-color: #333333;
+                  color: white;
+                }
                 .btn:hover {
-                  background-color: #a9a9a9;
+                  background-color:  #707070;
                 }
           
                 .span-two  {
                   grid-column: span 2;
                   color: white;
-                  background-color: rgba(1, 18, 177, 0.8);
+                  background-color: #f1a33b;
+                  border-radius: 2em;
                 }
           
                 .span-two:hover {
-                    background-color: rgba(51, 173, 255, 0.8);
+                    background-color: white;
+                    color: #f1a33b;
                   }
 
                 .output{
@@ -67,22 +74,12 @@
           
                 .output .previous-operand{
                   color: rgba(255,255, 255, 0.75);
-                  font-size: 1.5rem;
+                  font-size: 3.5rem;
                 }
           
                 .output .current-operand{
                   color: white;
-                  font-size: 2.5rem;
-                }
-
-                .equal {
-                    border-bottom-right-radius: 0.1em;
-                    border: 0px;
-                }
-
-                .end {
-                    border-bottom-left-radius: 0.1em;
-                    border: 0px;
+                  font-size: 4.5rem;
                 }
     </style>
 </head>
